@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # GPDdev.github.io
 
 Gunpowder / Pegasus Bluie 双身份个人主页的纯静态版本。
@@ -40,3 +41,7 @@ GPDdev.github.io/
 头像已经处理成带透明背景的圆形 PNG；两张头图转换为 WebP 以减小加载体积。
 
 以后绑定 `hachile.me` 一类独立域名时，不需要重写页面结构。
+=======
+# gpddev.github.io
+Homepage
+>>>>>>> c94466678897a5f45b57aa5837f95c205f77100d
