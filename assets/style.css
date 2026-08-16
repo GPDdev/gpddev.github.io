@@ -373,6 +373,10 @@ a.link-card:hover, button.link-card:hover {
   .nav-pill:last-child { text-align: right; }
   .section-card, .intro-card { padding: 22px; }
   .cross-card { align-items: flex-start; }
+  .hero-copy .badge {
+    font-size: 1rem;
+    letter-spacing: .17em;
+  }
 }
 
 @media (max-width: 520px) {
@@ -387,4 +391,8 @@ a.link-card:hover, button.link-card:hover {
   .section-title span { display: inline-block; margin-top: 6px; }
   .identity-row { align-items: flex-start; flex-direction: column; gap: 5px; }
   .landing-footer, .page-footer { flex-direction: column; gap: 7px; }
+    .hero-copy .badge {
+    font-size: 1rem;
+    letter-spacing: .17em;
+  }
 }
