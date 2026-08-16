@@ -61,7 +61,7 @@ img { display: block; max-width: 100%; }
   margin: 0;
   font-size: clamp(1.8rem, 4vw, 3.8rem);
   line-height: .96;
-  letter-spacing: 0;
+  letter-spacing: -0.02em;
 }
 .subtitle {
   max-width: 500px;
