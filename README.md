@@ -1,2 +1,0 @@
-# gpddev.github.io
-Homepage
