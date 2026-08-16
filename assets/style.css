@@ -382,7 +382,16 @@ a.link-card:hover, button.link-card:hover {
   font-size: clamp(2rem, 4.4vw, 4rem);
   line-height: 1.05;
   letter-spacing: -0.02em;
-}
+  }
+  .hero-copy .alias { margin: 0; color: #dde2ea; font-size: 1.05rem; }
+  .card-type {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: .8rem;
+  letter-spacing: .05em;
+  font-weight: 800;
+  }
 }
 
 @media (max-width: 520px) {
@@ -406,5 +415,14 @@ a.link-card:hover, button.link-card:hover {
   font-size: clamp(2rem, 4.4vw, 4rem);
   line-height: 1.05;
   letter-spacing: -0.02em;
-}
+  }
+  .hero-copy .alias { margin: 0; color: #dde2ea; font-size: 1.05rem; }
+  .card-type {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: .8rem;
+  letter-spacing: .05em;
+  font-weight: 800;
+  }
 }
