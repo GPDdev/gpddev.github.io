@@ -218,8 +218,8 @@ img { display: block; max-width: 100%; }
   align-items: end;
 }
 .hero-avatar {
-  width: 140px;
-  height: 140px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   flex: 0 0 auto;
@@ -368,7 +368,7 @@ a.link-card:hover, button.link-card:hover {
   .identity-card, .card-content { min-height: 360px; }
   .profile-hero { min-height: 420px; }
   .hero-content { padding-top: 55px; align-items: flex-start; flex-direction: column; gap: 18px; }
-  .hero-avatar { width: 116px; height: 116px; }
+  .hero-avatar { width: 120px; height: 120px; }
   .topbar { align-items: flex-start; }
   .nav-pill:last-child { text-align: right; }
   .section-card, .intro-card { padding: 22px; }
@@ -389,7 +389,7 @@ a.link-card:hover, button.link-card:hover {
   .landing-shell, .profile-shell { width: min(100% - 24px, 1080px); }
   .card-content { padding: 22px; }
   .card-profile { align-items: flex-start; flex-direction: column; }
-  .avatar { width: 76px; height: 76px; }
+  .avatar { width: 100px; height: 100px; }
   .profile-hero { min-height: 440px; }
   .topbar { gap: 8px; }
   .nav-pill { padding: 9px 11px; font-size: .78rem; }
