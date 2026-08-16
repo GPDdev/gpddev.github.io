@@ -133,8 +133,8 @@ img { display: block; max-width: 100%; }
   display: block;
   margin-bottom: 6px;
   color: var(--muted);
-  font-size: .72rem;
-  letter-spacing: .16em;
+  font-size: 1rem;
+  letter-spacing: .05em;
   font-weight: 800;
 }
 .card-content h2 {
@@ -234,7 +234,7 @@ img { display: block; max-width: 100%; }
   letter-spacing: -.02em;
   margin-left: -0.07em;
 }
-.hero-copy .alias { margin: 0; color: #dde2ea; font-size: 1.05rem; }
+.hero-copy .alias { margin: 0; color: #dde2ea; font-size: 1.5rem; }
 .hero-copy .badge {
   display: inline-block;
   margin-bottom: 12px;
@@ -377,6 +377,12 @@ a.link-card:hover, button.link-card:hover {
     font-size: 1rem;
     letter-spacing: .17em;
   }
+  .landing h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4.4vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
 }
 
 @media (max-width: 520px) {
@@ -395,4 +401,10 @@ a.link-card:hover, button.link-card:hover {
     font-size: 1rem;
     letter-spacing: .17em;
   }
+  .landing h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4.4vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
 }
