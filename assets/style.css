@@ -232,7 +232,7 @@ img { display: block; max-width: 100%; }
   font-size: clamp(2rem, 4vw, 3.8rem);
   line-height: .92;
   letter-spacing: -.02em;
-  margin-left: -0.2em;
+  margin-left: -0.1em;
 }
 .hero-copy .alias { margin: 0; color: #dde2ea; font-size: 1.05rem; }
 .hero-copy .badge {
