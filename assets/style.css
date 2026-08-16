@@ -239,7 +239,7 @@ img { display: block; max-width: 100%; }
   display: inline-block;
   margin-bottom: 12px;
   color: var(--accent);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 800;
   letter-spacing: .1em;
 }
