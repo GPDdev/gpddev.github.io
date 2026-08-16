@@ -175,7 +175,7 @@ img { display: block; max-width: 100%; }
 }
 .profile-hero {
   position: relative;
-  min-height: 520px;
+  min-height: 440px;
   background-position: center;
   background-size: cover;
   isolation: isolate;
@@ -212,10 +212,10 @@ img { display: block; max-width: 100%; }
 }
 .nav-pill:hover { border-color: rgba(var(--accent-rgb), .7); background: rgba(5,8,14,.66); }
 .hero-content {
-  padding-top: 120px;
+  padding-top: 64px;
   display: flex;
   gap: 28px;
-  align-items: end;
+  align-items: center;
 }
 .hero-avatar {
   width: 148px;
@@ -229,21 +229,21 @@ img { display: block; max-width: 100%; }
 }
 .hero-copy h1 {
   margin: 0 0 8px;
-  font-size: clamp(3.5rem, 8vw, 7.2rem);
-  line-height: .92;
-  letter-spacing: -.065em;
+  font-size: clamp(3.2rem, 5.5vw, 5rem);
+  line-height: .96;
+  letter-spacing: -.055em;
 }
 .hero-copy .alias { margin: 0; color: #dde2ea; font-size: 1.05rem; }
 .hero-copy .badge {
   display: inline-block;
-  margin-bottom: 12px;
+  margin-bottom: 9px;
   color: var(--accent);
-  font-size: .76rem;
-  font-weight: 900;
-  letter-spacing: .17em;
+  font-size: 1.02rem;
+  font-weight: 800;
+  letter-spacing: .13em;
 }
 .page-main {
-  margin-top: -14px;
+  margin-top: -8px;
   padding-bottom: 70px;
 }
 .intro-card,
@@ -365,8 +365,8 @@ a.link-card:hover, button.link-card:hover {
   .subtitle { margin-top: 18px; }
   .identity-grid, .link-grid { grid-template-columns: 1fr; }
   .identity-card, .card-content { min-height: 360px; }
-  .profile-hero { min-height: 500px; }
-  .hero-content { padding-top: 94px; align-items: flex-start; flex-direction: column; gap: 18px; }
+  .profile-hero { min-height: 450px; }
+  .hero-content { padding-top: 54px; align-items: flex-start; flex-direction: column; gap: 18px; }
   .hero-avatar { width: 116px; height: 116px; }
   .topbar { align-items: flex-start; }
   .nav-pill:last-child { text-align: right; }
@@ -379,7 +379,7 @@ a.link-card:hover, button.link-card:hover {
   .card-content { padding: 22px; }
   .card-profile { align-items: flex-start; flex-direction: column; }
   .avatar { width: 76px; height: 76px; }
-  .profile-hero { min-height: 530px; }
+  .profile-hero { min-height: 500px; }
   .topbar { gap: 8px; }
   .nav-pill { padding: 9px 11px; font-size: .78rem; }
   .section-title { display: block; }
