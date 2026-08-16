@@ -239,9 +239,9 @@ img { display: block; max-width: 100%; }
   display: inline-block;
   margin-bottom: 12px;
   color: var(--accent);
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 800;
-  letter-spacing: .17em;
+  letter-spacing: 0em;
 }
 .page-main {
   margin-top: -14px;
