@@ -241,7 +241,7 @@ img { display: block; max-width: 100%; }
   color: var(--accent);
   font-size: 1.5rem;
   font-weight: 800;
-  letter-spacing: 0em;
+  letter-spacing: .1em;
 }
 .page-main {
   margin-top: -14px;
