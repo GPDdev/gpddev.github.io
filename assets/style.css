@@ -60,7 +60,7 @@ img { display: block; max-width: 100%; }
 .landing h1 {
   margin: 0;
   font-size: clamp(1.8rem, 4vw, 3.8rem);
-  line-height: .96;
+  line-height: 1.05;
   letter-spacing: -0.02em;
 }
 .subtitle {
