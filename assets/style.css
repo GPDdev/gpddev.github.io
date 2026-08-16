@@ -392,6 +392,9 @@ a.link-card:hover, button.link-card:hover {
   letter-spacing: .05em;
   font-weight: 800;
   }
+  .card-content h2 {
+  margin-bottom: 12px;
+  }
 }
 
 @media (max-width: 520px) {
@@ -424,5 +427,8 @@ a.link-card:hover, button.link-card:hover {
   font-size: .8rem;
   letter-spacing: .05em;
   font-weight: 800;
+  }
+  .card-content h2 {
+  margin-bottom: 12px;
   }
 }
