@@ -3,22 +3,169 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#c9f3ee">
+  <meta name="theme-color" content="#dff7f4">
   <meta name="description" content="Gunpowder / Pegasus Bluie identity hub">
   <title>Hachile Identity Hub</title>
+
   <link rel="stylesheet" href="./assets/style.css">
+
+  <style>
+    body.landing {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 12% 12%, rgba(255,255,255,.95), transparent 24rem),
+        radial-gradient(circle at 85% 75%, rgba(120,220,215,.28), transparent 32rem),
+        linear-gradient(135deg, #e9fbf8 0%, #d9f5f1 45%, #c8eeeb 100%);
+      color: #122126;
+    }
+
+    .landing .kicker { color: #557075; }
+    .landing h1 { color: #0d171b; }
+    .landing .subtitle { color: #5d7278; }
+    .landing-footer { color: #698086; }
+
+    .identity-card {
+      border-color: rgba(20,35,40,.14);
+      box-shadow: 0 22px 70px rgba(37,77,78,.18);
+    }
+
+    .gallery-card {
+      position: relative;
+      margin-top: 22px;
+      min-height: 138px;
+      padding: 26px 30px;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(20,55,58,.15);
+      background:
+        linear-gradient(115deg, rgba(255,255,255,.82), rgba(237,255,252,.68)),
+        rgba(255,255,255,.72);
+      box-shadow: 0 18px 48px rgba(45,94,94,.12);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 28px;
+      overflow: hidden;
+      transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+    }
+
+    .gallery-card::before {
+      content: "";
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      right: -80px;
+      top: -120px;
+      border-radius: 50%;
+      background: rgba(112,216,210,.22);
+      pointer-events: none;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(41,145,143,.38);
+      box-shadow: 0 26px 66px rgba(45,94,94,.18);
+    }
+
+    .gallery-left {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      min-width: 0;
+    }
+
+    .gallery-icon {
+      width: 72px;
+      height: 72px;
+      flex: 0 0 72px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      background: #0f2024;
+      color: #b9f4ee;
+      font-size: 2rem;
+      box-shadow: 0 10px 28px rgba(19,48,52,.16);
+    }
+
+    .gallery-label {
+      display: block;
+      margin-bottom: 5px;
+      color: #688087;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .gallery-copy h2 {
+      margin: 0 0 6px;
+      font-size: clamp(1.8rem,3vw,2.5rem);
+      letter-spacing: -.035em;
+      color: #102126;
+    }
+
+    .gallery-copy p {
+      margin: 0;
+      color: #60757b;
+      line-height: 1.6;
+    }
+
+    .gallery-enter {
+      position: relative;
+      z-index: 1;
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 18px;
+      border-radius: 999px;
+      background: #102126;
+      color: #d8fffb;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 520px) {
+      .gallery-card {
+        padding: 22px;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .gallery-left {
+        align-items: flex-start;
+      }
+
+      .gallery-icon {
+        width: 62px;
+        height: 62px;
+        flex-basis: 62px;
+        border-radius: 19px;
+      }
+
+      .gallery-enter {
+        align-self: stretch;
+        justify-content: space-between;
+      }
+    }
+  </style>
 </head>
+
 <body class="landing">
   <main class="landing-shell">
+
     <header class="brandline">
       <div>
-        <p class="kicker">WELCOME TO HACHILE IDENTITY HUB!</p>
+        <p class="kicker">HACHILE IDENTITY HUB</p>
         <h1>Which side<br>are you looking for?</h1>
       </div>
       <p class="subtitle">我有两个不同的身份……</p>
     </header>
 
     <section class="identity-grid" aria-label="身份选择">
+
       <a class="identity-card human" href="./gunpowder/">
         <div class="card-content">
           <div class="card-profile">
@@ -29,7 +176,11 @@
               <p>Student · Developer · Community Builder</p>
             </div>
           </div>
-          <div class="enter"><span>View personal homepage</span><strong>Enter →</strong></div>
+
+          <div class="enter">
+            <span>View personal homepage</span>
+            <strong>Enter →</strong>
+          </div>
         </div>
       </a>
 
@@ -43,24 +194,37 @@
               <p>Skyblue Mornbreeze</p>
             </div>
           </div>
-          <div class="enter"><span>View ponsona homepage</span><strong>Enter →</strong></div>
+
+          <div class="enter">
+            <span>View ponsona homepage</span>
+            <strong>Enter →</strong>
+          </div>
         </div>
       </a>
+
     </section>
 
-    <a class="gallery-entry" href="https://gallery.hachile.org/" aria-label="Open Hachile Gallery">
-      <div>
-        <span class="gallery-kicker">HACHILE GALLERY</span>
-        <h2>Gallery</h2>
-        <p>A small visual archive of things I like, make, play and remember.</p>
+    <a class="gallery-card" href="https://gallery.hachile.org/" aria-label="Open Hachile Gallery">
+      <div class="gallery-left">
+        <div class="gallery-icon" aria-hidden="true">▦</div>
+
+        <div class="gallery-copy">
+          <span class="gallery-label">Hachile Gallery</span>
+          <h2>Gallery</h2>
+          <p>A small visual archive of things I like, make, play and remember.</p>
+        </div>
       </div>
-      <strong>View gallery →</strong>
+
+      <span class="gallery-enter">
+        View Gallery <span>→</span>
+      </span>
     </a>
 
     <footer class="landing-footer">
       <span>hachile.org · ALPHA</span>
       <span>Powered by GPDdev</span>
     </footer>
+
   </main>
 </body>
 </html>
