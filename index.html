@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,25 +10,129 @@
   <link rel="stylesheet" href="./assets/style.css">
 
   <style>
-    body.landing {
-      min-height: 100vh;
-      background:
+    :root {
+      --landing-bg-light:
         radial-gradient(circle at 12% 12%, rgba(255,255,255,.95), transparent 24rem),
         radial-gradient(circle at 85% 75%, rgba(120,220,215,.28), transparent 32rem),
         linear-gradient(135deg, #e9fbf8 0%, #d9f5f1 45%, #c8eeeb 100%);
+
+      --landing-bg-dark:
+        radial-gradient(circle at 16% 20%, rgba(241,185,79,.12), transparent 28rem),
+        radial-gradient(circle at 85% 75%, rgba(139,237,235,.12), transparent 30rem),
+        #070910;
+    }
+
+    /* ===== Theme toggle ===== */
+    .theme-toggle {
+      position: fixed;
+      top: 18px;
+      right: 18px;
+      z-index: 100;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 13px;
+      border-radius: 999px;
+      border: 1px solid rgba(30, 60, 64, .16);
+      background: rgba(255,255,255,.74);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 8px 26px rgba(34, 80, 80, .12);
+      color: #163136;
+      cursor: pointer;
+      font: inherit;
+      font-size: .86rem;
+      font-weight: 750;
+      transition: transform .18s ease, background .18s ease, color .18s ease, border-color .18s ease;
+    }
+
+    .theme-toggle:hover {
+      transform: translateY(-1px);
+    }
+
+    .theme-toggle .theme-icon {
+      font-size: 1rem;
+      line-height: 1;
+    }
+
+    /* ===== Light mode ===== */
+    html[data-theme="light"] body.landing {
+      min-height: 100vh;
+      background: var(--landing-bg-light);
       color: #122126;
     }
 
-    .landing .kicker { color: #557075; }
-    .landing h1 { color: #0d171b; }
-    .landing .subtitle { color: #5d7278; }
-    .landing-footer { color: #698086; }
-
-    .identity-card {
-      border-color: rgba(20,35,40,.14);
-      box-shadow: 0 22px 70px rgba(37,77,78,.18);
+    html[data-theme="light"] .landing .kicker {
+      color: #557075;
     }
 
+    html[data-theme="light"] .landing h1 {
+      color: #0d171b;
+    }
+
+    html[data-theme="light"] .landing .subtitle {
+      color: #5d7278;
+    }
+
+    html[data-theme="light"] .landing-footer {
+      color: #698086;
+    }
+
+    /*
+      Light mode identity cards:
+      keep the background images faintly visible, but make the cards themselves white.
+    */
+    html[data-theme="light"] .identity-card {
+      background: rgba(255,255,255,.90);
+      border-color: rgba(20,55,58,.14);
+      box-shadow: 0 22px 70px rgba(37,77,78,.16);
+    }
+
+    html[data-theme="light"] .identity-card::before {
+      opacity: .18;
+      filter: saturate(.72) contrast(.9);
+    }
+
+    html[data-theme="light"] .identity-card::after {
+      background:
+        linear-gradient(
+          to top,
+          rgba(255,255,255,.98) 4%,
+          rgba(255,255,255,.90) 46%,
+          rgba(255,255,255,.55) 100%
+        );
+    }
+
+    html[data-theme="light"] .card-type {
+      color: #60757b;
+    }
+
+    html[data-theme="light"] .card-content h2 {
+      color: #102126;
+    }
+
+    html[data-theme="light"] .card-content p {
+      color: #51666c;
+    }
+
+    html[data-theme="light"] .enter {
+      border-top-color: rgba(18,48,54,.12);
+      color: #173137;
+    }
+
+    html[data-theme="light"] .human .enter strong {
+      color: #a66d00;
+    }
+
+    html[data-theme="light"] .pony .enter strong {
+      color: #167d7b;
+    }
+
+    html[data-theme="light"] .avatar {
+      border-color: rgba(18,48,54,.10);
+      box-shadow: 0 8px 24px rgba(26,62,66,.14);
+    }
+
+    /* ===== Gallery card, light mode ===== */
     .gallery-card {
       position: relative;
       margin-top: 22px;
@@ -45,7 +149,7 @@
       align-items: center;
       gap: 28px;
       overflow: hidden;
-      transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+      transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease, background .22s ease;
     }
 
     .gallery-card::before {
@@ -126,6 +230,121 @@
       white-space: nowrap;
     }
 
+    /* ===== Dark mode ===== */
+    html[data-theme="dark"] body.landing {
+      min-height: 100vh;
+      background: var(--landing-bg-dark);
+      color: #f6f8fc;
+    }
+
+    html[data-theme="dark"] .landing .kicker,
+    html[data-theme="dark"] .landing .subtitle {
+      color: #aab2c2;
+    }
+
+    html[data-theme="dark"] .landing h1 {
+      color: #f6f8fc;
+    }
+
+    html[data-theme="dark"] .landing-footer {
+      color: #747e90;
+    }
+
+    html[data-theme="dark"] .theme-toggle {
+      color: #f3f7fa;
+      border-color: rgba(255,255,255,.15);
+      background: rgba(9,12,20,.74);
+      box-shadow: 0 8px 26px rgba(0,0,0,.24);
+    }
+
+    html[data-theme="dark"] .identity-card {
+      background: transparent;
+      border-color: var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    html[data-theme="dark"] .identity-card::before {
+      opacity: 1;
+      filter: none;
+    }
+
+    html[data-theme="dark"] .identity-card::after {
+      background: linear-gradient(
+        to top,
+        rgba(4,7,13,.96) 3%,
+        rgba(4,7,13,.55) 52%,
+        rgba(4,7,13,.18)
+      );
+    }
+
+    html[data-theme="dark"] .card-type {
+      color: var(--muted);
+    }
+
+    html[data-theme="dark"] .card-content h2 {
+      color: #f6f8fc;
+    }
+
+    html[data-theme="dark"] .card-content p {
+      color: #d5d9e3;
+    }
+
+    html[data-theme="dark"] .enter {
+      border-top-color: rgba(255,255,255,.16);
+      color: #f6f8fc;
+    }
+
+    html[data-theme="dark"] .human .enter strong {
+      color: var(--human);
+    }
+
+    html[data-theme="dark"] .pony .enter strong {
+      color: var(--pony);
+    }
+
+    html[data-theme="dark"] .gallery-card {
+      border-color: rgba(255,255,255,.10);
+      background:
+        linear-gradient(120deg, rgba(20,29,39,.92), rgba(9,15,23,.92)),
+        rgba(10,15,23,.94);
+      box-shadow: 0 22px 65px rgba(0,0,0,.28);
+    }
+
+    html[data-theme="dark"] .gallery-card::before {
+      background: rgba(92,206,201,.11);
+    }
+
+    html[data-theme="dark"] .gallery-label {
+      color: #8da0a7;
+    }
+
+    html[data-theme="dark"] .gallery-copy h2 {
+      color: #f4f8fa;
+    }
+
+    html[data-theme="dark"] .gallery-copy p {
+      color: #aebac1;
+    }
+
+    html[data-theme="dark"] .gallery-icon {
+      background: #dff9f6;
+      color: #102126;
+    }
+
+    html[data-theme="dark"] .gallery-enter {
+      background: #d9f7f4;
+      color: #102126;
+    }
+
+    @media (max-width: 800px) {
+      .theme-toggle {
+        top: 12px;
+        right: 12px;
+        padding: 8px 11px;
+        font-size: .8rem;
+      }
+    }
+
     @media (max-width: 520px) {
       .gallery-card {
         padding: 22px;
@@ -149,11 +368,32 @@
         align-self: stretch;
         justify-content: space-between;
       }
+
+      .theme-toggle .theme-label {
+        display: none;
+      }
     }
   </style>
+
+  <script>
+    (function () {
+      const saved = localStorage.getItem('hachile-theme');
+      const preferredDark = window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+      const theme = saved || (preferredDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
 </head>
 
 <body class="landing">
+
+  <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换亮暗模式">
+    <span class="theme-icon" id="themeIcon">☀</span>
+    <span class="theme-label" id="themeLabel">Light</span>
+  </button>
+
   <main class="landing-shell">
 
     <header class="brandline">
@@ -226,5 +466,41 @@
     </footer>
 
   </main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const icon = document.getElementById('themeIcon');
+    const label = document.getElementById('themeLabel');
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
+
+    function syncThemeButton() {
+      const theme = document.documentElement.getAttribute('data-theme');
+      const isDark = theme === 'dark';
+
+      icon.textContent = isDark ? '☾' : '☀';
+      label.textContent = isDark ? 'Dark' : 'Light';
+      toggle.setAttribute(
+        'aria-label',
+        isDark ? '切换到亮色模式' : '切换到暗色模式'
+      );
+
+      themeMeta.setAttribute(
+        'content',
+        isDark ? '#070910' : '#dff7f4'
+      );
+    }
+
+    toggle.addEventListener('click', function () {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('hachile-theme', next);
+      syncThemeButton();
+    });
+
+    syncThemeButton();
+  </script>
+
 </body>
 </html>
