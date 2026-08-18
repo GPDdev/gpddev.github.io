@@ -54,7 +54,7 @@
       line-height: 1;
     }
 
-    /* ===== Light mode ===== */
+    /* ===== Light mode page ===== */
     html[data-theme="light"] body.landing {
       min-height: 100vh;
       background: var(--landing-bg-light);
@@ -77,62 +77,59 @@
       color: #698086;
     }
 
-    /*
-      Light mode identity cards:
-      keep the background images faintly visible, but make the cards themselves white.
-    */
-    html[data-theme="light"] .identity-card {
-      background: rgba(255,255,255,.90);
-      border-color: rgba(20,55,58,.14);
-      box-shadow: 0 22px 70px rgba(37,77,78,.16);
+    /* ===== Identity cards ALWAYS stay in dark style ===== */
+    .identity-card {
+      background: transparent;
+      border-color: var(--line);
+      box-shadow: var(--shadow);
     }
 
-    html[data-theme="light"] .identity-card::before {
-      opacity: .18;
-      filter: saturate(.72) contrast(.9);
+    .identity-card::before {
+      opacity: 1;
+      filter: none;
     }
 
-    html[data-theme="light"] .identity-card::after {
-      background:
-        linear-gradient(
-          to top,
-          rgba(255,255,255,.98) 4%,
-          rgba(255,255,255,.90) 46%,
-          rgba(255,255,255,.55) 100%
-        );
+    .identity-card::after {
+      background: linear-gradient(
+        to top,
+        rgba(4,7,13,.96) 3%,
+        rgba(4,7,13,.55) 52%,
+        rgba(4,7,13,.18)
+      );
     }
 
-    html[data-theme="light"] .card-type {
-      color: #60757b;
+    .card-type {
+      color: var(--muted);
     }
 
-    html[data-theme="light"] .card-content h2 {
-      color: #102126;
+    .card-content h2 {
+      color: #f6f8fc;
     }
 
-    html[data-theme="light"] .card-content p {
-      color: #51666c;
+    .card-content p {
+      color: #d5d9e3;
     }
 
-    html[data-theme="light"] .enter {
-      border-top-color: rgba(18,48,54,.12);
-      color: #173137;
+    .enter {
+      border-top-color: rgba(255,255,255,.16);
+      color: #f6f8fc;
     }
 
-    html[data-theme="light"] .human .enter strong {
-      color: #a66d00;
+    .human .enter strong {
+      color: var(--human);
     }
 
-    html[data-theme="light"] .pony .enter strong {
-      color: #167d7b;
+    .pony .enter strong {
+      color: var(--pony);
     }
 
-    html[data-theme="light"] .avatar {
-      border-color: rgba(18,48,54,.10);
-      box-shadow: 0 8px 24px rgba(26,62,66,.14);
+    .avatar {
+      border-color: rgba(255,255,255,.9);
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+      background: #fff;
     }
 
-    /* ===== Gallery card, light mode ===== */
+    /* ===== Gallery card: default/light ===== */
     .gallery-card {
       position: relative;
       margin-top: 22px;
@@ -230,7 +227,7 @@
       white-space: nowrap;
     }
 
-    /* ===== Dark mode ===== */
+    /* ===== Dark mode page ===== */
     html[data-theme="dark"] body.landing {
       min-height: 100vh;
       background: var(--landing-bg-dark);
@@ -255,51 +252,6 @@
       border-color: rgba(255,255,255,.15);
       background: rgba(9,12,20,.74);
       box-shadow: 0 8px 26px rgba(0,0,0,.24);
-    }
-
-    html[data-theme="dark"] .identity-card {
-      background: transparent;
-      border-color: var(--line);
-      box-shadow: var(--shadow);
-    }
-
-    html[data-theme="dark"] .identity-card::before {
-      opacity: 1;
-      filter: none;
-    }
-
-    html[data-theme="dark"] .identity-card::after {
-      background: linear-gradient(
-        to top,
-        rgba(4,7,13,.96) 3%,
-        rgba(4,7,13,.55) 52%,
-        rgba(4,7,13,.18)
-      );
-    }
-
-    html[data-theme="dark"] .card-type {
-      color: var(--muted);
-    }
-
-    html[data-theme="dark"] .card-content h2 {
-      color: #f6f8fc;
-    }
-
-    html[data-theme="dark"] .card-content p {
-      color: #d5d9e3;
-    }
-
-    html[data-theme="dark"] .enter {
-      border-top-color: rgba(255,255,255,.16);
-      color: #f6f8fc;
-    }
-
-    html[data-theme="dark"] .human .enter strong {
-      color: var(--human);
-    }
-
-    html[data-theme="dark"] .pony .enter strong {
-      color: var(--pony);
     }
 
     html[data-theme="dark"] .gallery-card {
@@ -479,6 +431,7 @@
 
       icon.textContent = isDark ? '☾' : '☀';
       label.textContent = isDark ? 'Dark' : 'Light';
+
       toggle.setAttribute(
         'aria-label',
         isDark ? '切换到亮色模式' : '切换到暗色模式'
