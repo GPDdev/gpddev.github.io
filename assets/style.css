@@ -191,7 +191,7 @@ img { display: block; max-width: 100%; }
     linear-gradient(to right, rgba(4,7,12,.5), transparent 62%);
 }
 .human-page .profile-hero { background-image: url('./images/gunpowder-hero.webp'); }
-.pony-page .profile-hero { background-image: url('./images/skyblue-hero.webp'); }
+.pony-page .profile-hero { background-image: url('./images/skyblue-pony.png'); }
 .profile-shell { width: min(1080px, calc(100% - 36px)); margin: auto; }
 .topbar {
   display: flex;
