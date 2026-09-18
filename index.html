@@ -199,6 +199,10 @@
       text-transform: uppercase;
     }
 
+    .gallery-copy {
+      min-width: 0;
+    }
+
     .gallery-copy h2 {
       margin: 0 0 6px;
       font-size: clamp(1.8rem,3vw,2.5rem);
@@ -210,6 +214,7 @@
       margin: 0;
       color: #60757b;
       line-height: 1.6;
+      overflow-wrap: anywhere;
     }
 
     .gallery-enter {
@@ -416,6 +421,22 @@
 
       <span class="gallery-enter">
         Read Blog <span>→</span>
+      </span>
+    </a>
+
+    <a class="gallery-card" href="https://research.hachile.org/" aria-label="Open Hachile Research Portfolio">
+      <div class="gallery-left">
+        <div class="gallery-icon" aria-hidden="true">⌕</div>
+
+        <div class="gallery-copy">
+          <span class="gallery-label">Hachile Research</span>
+          <h2>Research</h2>
+          <p>Research, engineering projects, technical skills and selected achievements.</p>
+        </div>
+      </div>
+
+      <span class="gallery-enter">
+        View Research <span>→</span>
       </span>
     </a>
 
