@@ -71,6 +71,10 @@ h1 {
   text-wrap: balance;
 }
 
+.english-page h1 {
+  font-size: clamp(1.2rem, 2.52vw, 2.61rem);
+}
+
 .choices {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -172,6 +176,10 @@ h1 {
 .mobile-page h1 {
   font-size: clamp(1.75rem, 7.8vw, 2.55rem);
   line-height: 1.35;
+}
+
+.mobile-page.english-page h1 {
+  font-size: clamp(1.05rem, 4.68vw, 1.53rem);
 }
 
 .mobile-page .choices {
