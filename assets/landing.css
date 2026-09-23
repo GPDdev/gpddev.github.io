@@ -1,0 +1,210 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  color: #18201c;
+  background: #f2f1eb;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  padding: clamp(5.5rem, 9vh, 8rem) clamp(1.5rem, 6vw, 6rem) clamp(2rem, 5vh, 4rem);
+  background:
+    radial-gradient(circle at 8% 15%, rgba(255, 255, 255, .95), transparent 28rem),
+    radial-gradient(circle at 92% 85%, rgba(119, 161, 139, .18), transparent 30rem),
+    #f2f1eb;
+}
+
+.language {
+  position: fixed;
+  z-index: 2;
+  top: 1.5rem;
+  right: 1.75rem;
+  padding: .7rem 1rem;
+  border: 1px solid rgba(24, 32, 28, .28);
+  border-radius: 999px;
+  color: inherit;
+  background: rgba(242, 241, 235, .78);
+  backdrop-filter: blur(12px);
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-decoration: none;
+  transition: background .2s ease, color .2s ease;
+}
+
+.language:hover,
+.language:focus-visible {
+  color: #f8f7f2;
+  background: #18201c;
+}
+
+.shell {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.eyebrow {
+  margin: 0 0 1.1rem;
+  color: #5b6a62;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+}
+
+h1 {
+  max-width: 1050px;
+  margin: 0;
+  font-family: "Noto Serif SC", "Songti SC", STSong, Georgia, serif;
+  font-size: clamp(2rem, 4.2vw, 4.35rem);
+  font-weight: 500;
+  letter-spacing: -.035em;
+  line-height: 1.28;
+  text-wrap: balance;
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(.8rem, 1.5vw, 1.35rem);
+  margin-top: clamp(3.2rem, 7vh, 6rem);
+}
+
+.choice {
+  position: relative;
+  display: flex;
+  aspect-ratio: 1;
+  min-width: 0;
+  padding: clamp(1.35rem, 2.3vw, 2.15rem);
+  border: 1px solid rgba(24, 32, 28, .16);
+  border-radius: 1rem;
+  color: #18201c;
+  background: rgba(255, 255, 255, .5);
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.choice::before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  aspect-ratio: 1;
+  right: -25%;
+  bottom: -28%;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: .52;
+  transition: transform .3s ease, opacity .3s ease;
+}
+
+.choice:hover,
+.choice:focus-visible {
+  transform: translateY(-7px);
+  border-color: rgba(24, 32, 28, .32);
+  box-shadow: 0 24px 55px rgba(31, 44, 36, .14);
+}
+
+.choice:hover::before,
+.choice:focus-visible::before {
+  transform: scale(1.18);
+  opacity: .72;
+}
+
+.choice-cv { --accent: #c8dbce; }
+.choice-home { --accent: #e5cf9e; }
+.choice-sky { --accent: #b9dce4; }
+
+.number {
+  position: relative;
+  z-index: 1;
+  color: #65736b;
+  font: 700 .72rem/1 ui-monospace, SFMono-Regular, Consolas, monospace;
+  letter-spacing: .08em;
+}
+
+.choice-copy {
+  position: absolute;
+  z-index: 1;
+  left: clamp(1.35rem, 2.3vw, 2.15rem);
+  right: clamp(1.35rem, 2.3vw, 2.15rem);
+  bottom: clamp(1.35rem, 2.3vw, 2.15rem);
+}
+
+.choice strong,
+.choice small { display: block; }
+
+.choice strong {
+  font-family: "Noto Serif SC", "Songti SC", STSong, Georgia, serif;
+  font-size: clamp(1.45rem, 2.5vw, 2.35rem);
+  font-weight: 600;
+  line-height: 1.18;
+}
+
+.choice small {
+  max-width: 90%;
+  margin-top: .65rem;
+  color: #4f5d56;
+  font-size: clamp(.78rem, 1vw, .92rem);
+  line-height: 1.5;
+}
+
+.arrow {
+  position: absolute;
+  z-index: 1;
+  top: clamp(1.2rem, 2vw, 1.8rem);
+  right: clamp(1.2rem, 2vw, 1.8rem);
+  font-size: 1.25rem;
+}
+
+.mobile-page body {
+  padding: 5.5rem 1.15rem 2.5rem;
+}
+
+.mobile-page h1 {
+  font-size: clamp(1.75rem, 7.8vw, 2.55rem);
+  line-height: 1.35;
+}
+
+.mobile-page .choices {
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 2.75rem;
+}
+
+.mobile-page .choice {
+  width: 100%;
+  aspect-ratio: 1;
+  padding: 1.45rem;
+}
+
+.mobile-page .choice-copy {
+  left: 1.45rem;
+  right: 1.45rem;
+  bottom: 1.45rem;
+}
+
+.mobile-page .choice strong {
+  font-size: clamp(1.7rem, 8vw, 2.6rem);
+}
+
+.mobile-page .choice small { font-size: .9rem; }
+
+@media (max-width: 760px) {
+  body { padding: 5.5rem 1.15rem 2.5rem; }
+  .language { top: 1rem; right: 1rem; }
+  .choices { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before { transition: none !important; }
+}
