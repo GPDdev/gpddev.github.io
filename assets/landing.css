@@ -52,14 +52,6 @@ body {
   margin: 0 auto;
 }
 
-.eyebrow {
-  margin: 0 0 1.1rem;
-  color: #5b6a62;
-  font-size: .72rem;
-  font-weight: 800;
-  letter-spacing: .18em;
-}
-
 h1 {
   max-width: 1050px;
   margin: 0;
