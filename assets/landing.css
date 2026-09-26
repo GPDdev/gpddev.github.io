@@ -88,6 +88,7 @@ h1 {
   display: flex;
   aspect-ratio: 1.35;
   min-width: 0;
+  min-height: 250px;
   padding: clamp(1.35rem, 2.3vw, 2.15rem);
   border: 1px solid rgba(24, 32, 28, .16);
   border-radius: 1rem;
